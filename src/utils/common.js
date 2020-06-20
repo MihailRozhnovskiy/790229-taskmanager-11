@@ -9,3 +9,19 @@ export const formatTime = (date) => {
 
   return `${hours}:${minutes}`;
 };
+
+
+export const isRepeating = (repeatingDays) => {
+  return Object.values(repeatingDays).some(Boolean);
+};
+
+export const isOverdueDate = (dueDate, date) => {
+  return dueDate < date && !isOneDay(date, dueDate);
+};
+
+export const isOneDay = (dateA, dateB) => {
+  const a = dateA;
+  const b = dateB;
+ // return a.diff(b, `days`) === 0 && dateA.getDate() === dateB.getDate();
+};
+
