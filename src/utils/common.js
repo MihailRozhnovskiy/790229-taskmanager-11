@@ -20,8 +20,6 @@ export const isOverdueDate = (dueDate, date) => {
 };
 
 export const isOneDay = (dateA, dateB) => {
-  const a = dateA;
-  const b = dateB;
- // return a.diff(b, `days`) === 0 && dateA.getDate() === dateB.getDate();
+  return dateA === dateB;
 };
 
